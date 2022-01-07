@@ -9,7 +9,7 @@ const AppRouter: FC = () => {
       {Components.map(route => (
         <Route key={route.path} path={route.path} element={route.component} />
       ))}
-      <Route path="*" element={<NotFound />} />
+      {/*<Route path="*" element={<NotFound />} />*/}
     </Routes>
   )
 }

@@ -8,6 +8,7 @@ const TodoPage = () => {
   return (
     <Layout.Main>
       <StyleContainer column>
+         TodoPage
         <Sample.Container />
       </StyleContainer>
     </Layout.Main>

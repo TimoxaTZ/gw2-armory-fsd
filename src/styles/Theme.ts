@@ -5,8 +5,10 @@ import  ColorsScheme  from './ColorsScheme';
 
 export const Theme = {
   // Initialization
-  backgroundColor: '#0D0D11',
-  primaryColor: '#FFFFFF',
+  backgroundColor: '#FFFFFF',
+  // backgroundColor: '#0D0D11',
+  primaryColor: '#0D0D11',
+  // primaryColor: '#FFFFFF',
   normalFontSize: `${px2vw(18)}`,
 
   // H1
