@@ -1,15 +1,13 @@
 import React from 'react'
-
-import { Sample } from '../../features/widgets/_Sample'
 import { Layout } from '../../layouts'
 import StyleContainer from '../../styles/StyleContainer'
+import {Auth} from "../../features/widgets/Auth";
 
 const AuthPage = () => {
   return (
     <Layout.Main>
       <StyleContainer column>
-          AuthPage
-        {/*<Sample.Container />*/}
+          <Auth.Container/>
       </StyleContainer>
     </Layout.Main>
   )

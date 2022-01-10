@@ -1,10 +1,26 @@
-import React, { FC } from 'react'
-import { SimpleStyle } from './style'
+import React, {FC} from 'react'
+import {StyledHeader, StyledHeaderButtons, StyledLogo, StyledLogoName, StyledNamedLogo} from './style'
+import logo from './../../../../assets/images/logo.jpg'
+import SimpleButton from "../../atoms/SimpleButton";
 
 type OwnPropertyType = {}
 
-const Simple: FC<OwnPropertyType> = () => {
-  return <SimpleStyle></SimpleStyle>
+const Header: FC<OwnPropertyType> = () => {
+
+    const token = localStorage.getItem('token')
+
+    return (
+        <StyledHeader>
+            <StyledNamedLogo>
+                <StyledLogo src={logo}/>
+                <StyledLogoName>Guild Wars 2 Armory</StyledLogoName>
+            </StyledNamedLogo>
+            <StyledHeaderButtons>
+              <SimpleButton buttonUrl={'/'} buttonName={'About'}/>
+              <SimpleButton buttonUrl={'/auth'} buttonName={!token ? 'Login' : 'Change API-key'}/>
+            </StyledHeaderButtons>
+        </StyledHeader>
+    )
 }
 
-export default Simple
+export default Header

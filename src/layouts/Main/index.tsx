@@ -1,6 +1,7 @@
 import React, {FC} from 'react'
-import {StyledAppContainer, StyledBackground, StyledContainer, StyledContentBox, StyledProgressbar} from "./style";
+import {StyledAppContainer, StyledBackground, StyledContainer, StyledProgressbar} from "./style";
 import {CircularProgress} from "@mui/material";
+import Header from "../../components/shared/moleculas/Header";
 
 
 const Main: FC = props => {
@@ -9,10 +10,7 @@ const Main: FC = props => {
 
     return (
             <StyledAppContainer>
-                <StyledContentBox>
-                    {/*<div>*/}
-                    {/*    Header*/}
-                    {/*</div>*/}
+                <Header/>
                     <StyledBackground>
                         <StyledContainer>
                             {
@@ -24,7 +22,6 @@ const Main: FC = props => {
                             }
                         </StyledContainer>
                     </StyledBackground>
-                </StyledContentBox>
             </StyledAppContainer>
     )
 }
