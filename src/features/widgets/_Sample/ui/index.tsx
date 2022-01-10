@@ -5,7 +5,7 @@ import StyleContainer from '../../../../styles/StyleContainer'
 export type UIPropertyType = {}
 
 const UI: FC<UIPropertyType> = props => {
-  return <StyleContainer>s</StyleContainer>
+  return <StyleContainer>sad</StyleContainer>
 }
 
 export default UI

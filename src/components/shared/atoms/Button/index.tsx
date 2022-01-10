@@ -1,5 +1,5 @@
 import React, {FC} from 'react'
-import {StyledButtonContainer, StyledButtonNavSpan, StyledNavLink} from './style'
+import {StyledButtonContainer, StyledButtonBody, StyledNavLinkHighlight} from './style'
 
 
 type OwnPropertyType = {
@@ -9,27 +9,21 @@ type OwnPropertyType = {
   resetStorage?: boolean
 }
 
-// const highlight = {
-//   1: styles.button_style1_nav,
-//   2: styles.button_style2_nav
-// }
-
-const Button: FC<OwnPropertyType> = (props) => {
+const StyledButton: FC<OwnPropertyType> = (props) => {
 
   if (props.resetStorage) {
     localStorage.clear();
   }
 
-  return (
+    return (
       <StyledButtonContainer>
-        {/*<NavLink to={props.buttonUrl} className={highlight[props.buttonStyle]}>*/}
-        <StyledNavLink to={props.buttonUrl} buttonStyle={props.buttonStyle}>
-          <StyledButtonNavSpan>
-            {props.buttonName}
-          </StyledButtonNavSpan>
-        </StyledNavLink>
+            <StyledNavLinkHighlight to={props.buttonUrl} buttonStyle={props.buttonStyle}>
+                <StyledButtonBody>
+                    {props.buttonName}
+                </StyledButtonBody>
+            </StyledNavLinkHighlight>
       </StyledButtonContainer>
   )
 }
 
-export default Button
+export default StyledButton
