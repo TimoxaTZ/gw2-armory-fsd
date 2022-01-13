@@ -1,7 +1,7 @@
 import React, {FC} from 'react'
 import {StyledHeader, StyledHeaderButtons, StyledLogo, StyledLogoName, StyledNamedLogo} from './style'
 import logo from './../../../../assets/images/logo.jpg'
-import SimpleButton from "../../atoms/SimpleButton";
+import SimpleButton from "../../atoms/Buttons/SimpleButton";
 
 type OwnPropertyType = {}
 

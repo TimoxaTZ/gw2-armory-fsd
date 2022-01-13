@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { PresentationStyle } from './style'
 import StyleContainer from '../../../../styles/StyleContainer'
-import HighlightedButton from "../../../../components/shared/atoms/HighligtedButton";
+import HighlightedButton from "../../../../components/shared/atoms/Buttons/HighligtedButton";
 import ContentFilling from "../templates/ContentFilling";
 import AboutLine from "../templates/AboutLine";
 

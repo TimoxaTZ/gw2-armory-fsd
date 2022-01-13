@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useState} from 'react'
 import { PresentationStyle } from './style'
 import StyleContainer from '../../../../styles/StyleContainer'
-import SimpleButton from "../../../../components/shared/atoms/SimpleButton";
+import SimpleButton from "../../../../components/shared/atoms/Buttons/SimpleButton";
 
 export type UIPropertyType = {}
 

@@ -1,7 +1,7 @@
 import React, {FC} from 'react'
 import {StyledAppContainer, StyledBackground, StyledContainer, StyledProgressbar} from "./style";
 import {CircularProgress} from "@mui/material";
-import Header from "../../components/shared/moleculas/Header";
+import { Header } from '../../features/widgets/Header';
 
 
 const Main: FC = props => {
@@ -10,7 +10,7 @@ const Main: FC = props => {
 
     return (
             <StyledAppContainer>
-                <Header/>
+                <Header.Container/>
                     <StyledBackground>
                         <StyledContainer>
                             {
