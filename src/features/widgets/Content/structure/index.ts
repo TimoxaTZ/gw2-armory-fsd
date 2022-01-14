@@ -1,6 +1,6 @@
 const initialState = {
   loading: false,
-  sample: '',
+  content: '',
 }
 
 export default initialState

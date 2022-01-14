@@ -2,11 +2,11 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import initialState from '../structure'
 
 export const slice = createSlice({
-  name: `SampleW`,
+  name: `AuthW`,
   initialState,
   reducers: {
-    setJWT(state, action: PayloadAction<{ sample: string }>) {
-      state.sample = action.payload.sample
+    setJWT(state, action: PayloadAction<{ auth: string }>) {
+      state.auth = action.payload.auth
     },
   },
 })

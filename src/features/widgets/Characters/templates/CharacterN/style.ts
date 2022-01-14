@@ -1,35 +1,37 @@
 import styled from 'styled-components'
 
-export const StyledBox = styled.div`
+export const StyledName = styled.button`
     display: flex;
-    width: 55%;
-    
-    @media only screen and (max-width: 800px) {
-      width: 80%;
-    }
-    @media only screen and (max-width: 600px) {
-      width: 90%;
-    }
-    //position: relative;
-    //top: 5%;
-   
-`
-
-export const StyledTextField = styled.div`
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1vw;
-    //padding: 1vw 0 1vw 2.2vw;
+    margin: 0.5vw;
+     
+    height: 6vh;
+    min-width: 12vw;
 
-    //font-size: 24px;
-    //font-weight: 400;
+    //height: 25%;
+    //min-width: 30%;
+    
+    padding: 12px;
+    
+    @media only screen and (max-width: 1200px) {
+      min-width: 40%;
+    }
+    
+    @media only screen and (max-width: 1000px) {
+      min-width: 60%;
+    }
+    @media only screen and (max-width: 800px) {
+      width: 75%;
+    }
+    @media only screen and (max-width: 480px) {
+      width: 90%;
+    }
     
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 28px;
     text-align: center;
     //font-family: "Proza Regular",sans-serif;
     font-family: "GWTwoFont Version 1.1",serif;
@@ -38,7 +40,7 @@ export const StyledTextField = styled.div`
     box-sizing: border-box;
     border-radius: 5px;
     filter: blur(0.1px);
-    
+
     background-color: rgba(255, 255, 255, 0.23);
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: rgba(0, 0, 0, 0.27);
@@ -57,7 +59,7 @@ export const StyledTextField = styled.div`
     &:hover&:after {
       opacity: 1;
     }
-    
+
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;

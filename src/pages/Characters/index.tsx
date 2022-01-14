@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Sample } from '../../features/widgets/_Sample'
+import { Characters } from '../../features/widgets/Characters'
 import { Layout } from '../../layouts'
 import StyleContainer from '../../styles/StyleContainer'
 
@@ -8,8 +8,7 @@ const CharactersPage = () => {
   return (
     <Layout.Main>
       <StyleContainer column>
-          CharactersPage
-        {/*<Sample.Container />*/}
+        <Characters.Container />
       </StyleContainer>
     </Layout.Main>
   )
