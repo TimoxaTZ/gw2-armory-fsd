@@ -1,1 +1,1 @@
-export type CharactersType = {}
+export type CharactersType = string []
