@@ -5,8 +5,8 @@ type OwnPropsType = {
   text: string
 }
 
-const LogoName: FC<OwnPropsType> = props => {
-  return <StyledLogoName>{props.text}</StyledLogoName>
+const LogoName: FC<OwnPropsType> = ({ text }) => {
+  return <StyledLogoName>{text}</StyledLogoName>
 }
 
 export default LogoName

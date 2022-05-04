@@ -1,14 +1,12 @@
 import React, { FC } from 'react'
-import {StyledName} from './style'
+import { StyledName } from './style'
 
 type OwnPropsType = {
-    name: string
+  name: string
 }
 
-const StyledTitleBadge: FC<OwnPropsType> = props => {
-  return (
-        <StyledName>{props.name}</StyledName>
-  )
+const StyledTitleBadge: FC<OwnPropsType> = ({ name }) => {
+  return <StyledName>{name}</StyledName>
 }
 
 export default StyledTitleBadge
