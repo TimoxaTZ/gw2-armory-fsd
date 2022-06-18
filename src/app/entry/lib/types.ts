@@ -1,5 +1,3 @@
-import { FC } from 'react'
-
 enum ResultCodeEnum {
   ERROR,
   SUCCESS,

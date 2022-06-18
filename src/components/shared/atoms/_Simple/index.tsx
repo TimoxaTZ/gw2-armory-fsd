@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import { SimpleStyle } from './style'
 
 type OwnPropertyType = {}

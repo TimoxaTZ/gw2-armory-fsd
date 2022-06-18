@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import { StyledHeader, StyledLogoContainer, StyledNavMenu } from './style'
 import LogoName from '../templates/LogoName'
 import Logo from '../templates/Logo'

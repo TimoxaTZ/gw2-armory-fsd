@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import MaterialUIProvider from './MaterialUIProvider'
 import ReduxStoreProvider from './ReduxStoreProvider'
 import SnackBarProvider from './SnackBarProvider'

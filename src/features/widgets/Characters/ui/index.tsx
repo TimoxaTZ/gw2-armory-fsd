@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import { StyledGrid, StyledBox, StyledCharactersWidget } from './style'
 import CharacterN from '../templates/CharacterN'
 import ArrayRender from '../../../../components/shared/lib/ArrayRender'

@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import { PresentationStyle } from './style'
 import StyleContainer from '../../../../styles/StyleContainer'
 

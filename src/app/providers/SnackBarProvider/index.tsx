@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import { SnackbarProvider } from 'notistack'
 
 const SnackBarProvider: FC = props => {

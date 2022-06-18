@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import { ThemeProvider } from '@mui/material'
 import ColorsScheme from '../../../styles/ColorsScheme'
 import { createTheme } from '@mui/material/styles'

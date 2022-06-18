@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { NavLink } from 'react-router-dom'
 import { StyledButtonContainer, StyledButtonBody, StyledNavLinkHighlight } from './style'
 
 type OwnPropertyType = {
@@ -16,9 +16,11 @@ const HighlightedButton: FC<OwnPropertyType> = ({ buttonUrl, resetStorage, butto
 
   return (
     <StyledButtonContainer>
-      <StyledNavLinkHighlight to={buttonUrl} highlightStyle={highlightStyle}>
-        <StyledButtonBody>{buttonName}</StyledButtonBody>
-      </StyledNavLinkHighlight>
+      <NavLink to={buttonUrl}>
+        <StyledNavLinkHighlight highlightStyle={highlightStyle}>
+          <StyledButtonBody>{buttonName}</StyledButtonBody>
+        </StyledNavLinkHighlight>
+      </NavLink>
     </StyledButtonContainer>
   )
 }

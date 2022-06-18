@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import App from '../ui'
 import Providers from '../../providers'

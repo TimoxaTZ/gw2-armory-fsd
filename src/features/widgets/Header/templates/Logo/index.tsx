@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import { StyledImg } from './style'
 import logo from './../../../../assets/images/logo.jpg'
 

@@ -44,7 +44,8 @@ export const StyledButtonBody = styled.button`
 type StyledNavLinkPropsType = {
   highlightStyle: 1 | 2
 }
-export const StyledNavLinkHighlight = styled(NavLink)<StyledNavLinkPropsType>`
+
+export const StyledNavLinkHighlight = styled.div<StyledNavLinkPropsType>`
     position: relative;
     width: 160px;
     height: 60px;

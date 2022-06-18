@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import StyleContainer from '../../../../styles/StyleContainer'
 import HighlightedButton from '../../../../components/shared/atoms/Buttons/HighligtedButton'
 import ContentFilling from '../templates/ContentFilling'

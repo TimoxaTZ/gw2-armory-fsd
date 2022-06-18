@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Routes as Components } from './routes'
 import NotFound from '../../components/templates/404'
