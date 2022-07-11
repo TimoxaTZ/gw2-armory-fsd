@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import AppStyle from './style';
 import AppRouter from '../../router';
 import { condition } from '../../../features/services/condition';
@@ -7,13 +6,13 @@ import '../../../styles/unselectable.css';
 import '../../../features/services/localization';
 import { mobile } from '../../../features/services/mobile';
 
-const App: FC = props => {
+const App: FC = ({ children }) => {
   return (
     <AppStyle>
       <AppRouter />
       <CRI containers={[
         condition.useContainer,
-      mobile.useContainer
+        mobile.useContainer
       ]} />
     </AppStyle>
   )

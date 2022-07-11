@@ -1,40 +1,54 @@
-import { RouterComponentType } from '../entry/lib/types'
+import React, { lazy } from 'react'
 import NotFound from '../../components/templates/404'
-import React, { lazy, LazyExoticComponent, Suspense } from 'react'
-import Loading from '../../components/templates/Loading'
 import { Page } from '../../pages'
+import { RouterType } from '../entry/lib/types'
+import { WithSuspense } from './utils/withSuspense'
 
-const OtherComponent = lazy(() => import('../../components/templates/404'))
+const LazyComponent = lazy(() => import('../../components/templates/404'))
 
-const withSuspense = (Component: LazyExoticComponent<() => JSX.Element>) => (
-  <Suspense fallback={Loading}>
-    <Component />
-  </Suspense>
-)
-
-export const Routes: RouterComponentType[] = [
+export const Routes: RouterType[] = [
   {
     path: '/',
-    component: <Page.MainPage/>,
-  },
-  {
-    path: '/auth',
-    component: <Page.AuthPage/>,
-  },
-  {
-    path: '/characters',
-    component: <Page.CharactersPage/>,
+    child: [
+      {
+        index: true,
+        element: <Page.MainPage />,
+      },
+      {
+        path: 'auth',
+        child: [
+          {
+            index: true,
+            element: <Page.AuthPage />,
+          },
+        ],
+      },
+      {
+        path: 'characters',
+        child: [
+          {
+            index: true,
+            element: <Page.CharactersPage />,
+          },
+        ],
+      },
+    ],
   },
   {
     path: '*',
-    component: <Page.NotFoundPage/>,
+    child: [
+      {
+        index: true,
+        element: <Page.NotFoundPage />,
+      },
+    ],
   },
   {
-    path: '/3',
-    component: <p>sd</p>,
+    path: '/suspense',
+    element: WithSuspense(LazyComponent),
   },
   {
     path: '/NotFound',
-    component: <NotFound />,
+    element: <NotFound />,
   },
 ]

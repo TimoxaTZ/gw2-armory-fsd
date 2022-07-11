@@ -1,14 +1,13 @@
-import React, { FC } from 'react'
 import { StyledButtonContainer, StyledButtonBody, StyledNavLinkHighlight } from './style'
 
 type OwnPropertyType = {
   buttonUrl: string
   buttonName: string
-  highlightStyle: 1 | 2
+  highlight: 1 | 2
   resetStorage?: boolean
 }
 
-const HighlightedButton: FC<OwnPropertyType> = ({ buttonUrl, resetStorage, buttonName, highlightStyle }) => {
+const HighlightedButton: FC<OwnPropertyType> = ({ buttonUrl, resetStorage, buttonName, highlight }) => {
   //reset api-token
   if (resetStorage) {
     localStorage.clear()
@@ -16,7 +15,7 @@ const HighlightedButton: FC<OwnPropertyType> = ({ buttonUrl, resetStorage, butto
 
   return (
     <StyledButtonContainer>
-      <StyledNavLinkHighlight to={buttonUrl} highlightStyle={highlightStyle}>
+      <StyledNavLinkHighlight to={buttonUrl} highlight={highlight}>
         <StyledButtonBody>{buttonName}</StyledButtonBody>
       </StyledNavLinkHighlight>
     </StyledButtonContainer>

@@ -1,6 +1,8 @@
 import React, { Component, ErrorInfo } from 'react'
 
-interface IProps {}
+interface IProps {
+  children: React.ReactNode
+}
 interface IState {
   hasError: boolean
 }

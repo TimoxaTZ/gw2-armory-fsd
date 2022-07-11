@@ -1,8 +1,7 @@
-import React, { FC } from 'react'
 import { SnackbarProvider } from 'notistack'
 
-const SnackBarProvider: FC = props => {
-  return <SnackbarProvider>{props.children}</SnackbarProvider>
+const SnackBarProvider: FC = ({ children }) => {
+  return <SnackbarProvider>{children}</SnackbarProvider>
 }
 
 export default SnackBarProvider

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { ReactNode } from 'react'
 
 enum ResultCodeEnum {
   ERROR,
@@ -27,7 +27,12 @@ export type ThunkError = {
   }
 }
 
+export type RouterType = Partial<RouterComponentType>
+
 export type RouterComponentType = {
+  id: string
   path: string
-  component: FC | JSX.Element
+  element: ReactNode
+  index: boolean
+  child: RouterType[]
 }

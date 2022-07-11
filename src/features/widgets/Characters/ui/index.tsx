@@ -21,7 +21,7 @@ const UI: FC<UIPropertyType> = ({ characters, loading }) => {
           <StyledGrid>
             <ArrayRender items={characters} renderItem={character => <CharacterN key={character} name={character} />} />
           </StyledGrid>
-          <HighlightedButton buttonName={'Back'} highlightStyle={2} buttonUrl={'/'} key={'backRouteButton'} />
+          <HighlightedButton buttonName={'Back'} highlight={2} buttonUrl={'/'} key={'backRouteButton'} />
         </StyledBox>
       ) : (
         <Loading />

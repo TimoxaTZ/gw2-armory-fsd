@@ -14,8 +14,8 @@ const UI: FC<UIPropertyType> = ({ token }) => {
       <AboutLine />
       <ContentFilling />
       <StyleContainer middle>
-        <HighlightedButton buttonName={token === null ? 'Set API-Key' : 'Change API-Key'} highlightStyle={2} buttonUrl={'/auth'} key={'setApiTokenButton'} />
-        <HighlightedButton buttonName={'Characters'} highlightStyle={1} buttonUrl={'/characters'} key={'charactersRouteButton'} />
+        <HighlightedButton buttonName={token === null ? 'Set API-Key' : 'Change API-Key'} highlight={2} buttonUrl={'/auth'} key={'setApiTokenButton'} />
+        <HighlightedButton buttonName={'Characters'} highlight={1} buttonUrl={'/characters'} key={'charactersRouteButton'} />
       </StyleContainer>
     </StyleContainer>
   )

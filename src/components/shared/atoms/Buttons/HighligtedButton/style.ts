@@ -42,7 +42,7 @@ export const StyledButtonBody = styled.button`
   }
 `
 type StyledNavLinkPropsType = {
-  highlightStyle: 1 | 2
+  highlight: 1 | 2
 }
 export const StyledNavLinkHighlight = styled(NavLink)<StyledNavLinkPropsType>`
     position: relative;
@@ -58,10 +58,10 @@ export const StyledNavLinkHighlight = styled(NavLink)<StyledNavLinkPropsType>`
       inset: 0;
       background: #f00;
       transition: 0.5s;
-      background: ${({ highlightStyle }) =>
-        highlightStyle === 1
+      background: ${({ highlight }) =>
+        highlight === 1
           ? 'linear-gradient(45deg,#ff075b, #0e1538, #0e1538,#1aff22)'
-          : highlightStyle === 2 && 'linear-gradient(45deg,#00ccff, #0e1538, #0e1538,#d400d4)'}
+          : highlight === 2 && 'linear-gradient(45deg,#00ccff, #0e1538, #0e1538,#d400d4)'}
     }
     
     }
