@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
 
 export const StyledSimpleButtonBody = styled.button`
   background: rgba(0, 0, 0, 0.15);
@@ -29,7 +28,6 @@ export const StyledSimpleButtonBody = styled.button`
     -webkit-text-stroke-color: rgba(0, 0, 0, 0.2);
     background-color: rgba(255, 255, 255, 0.86);
     border: 1px solid rgb(255, 255, 255);
-    /*border-color: black;*/
     transition: color 0.3s linear, background-color 0.3s, border 0.3s linear;
   }
   &:hover&:after {

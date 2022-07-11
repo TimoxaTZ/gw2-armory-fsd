@@ -1,14 +1,12 @@
 import React, { FC } from 'react'
-import {StyledName} from './style'
+import { StyledName } from './style'
 
 type OwnPropsType = {
-    name: string
+  name: string
 }
 
-const CharacterN: FC<OwnPropsType> = props => {
-  return (
-        <StyledName>{props.name}</StyledName>
-  )
+const CharacterN: FC<OwnPropsType> = ({ name }) => {
+  return <StyledName>{name}</StyledName>
 }
 
 export default CharacterN
