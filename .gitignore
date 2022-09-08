@@ -7,6 +7,7 @@
 /.idea
 yarn.lock
 package.lock
+.git
 
 # testing
 /coverage

@@ -7,6 +7,6 @@ useTabs: false
 
 # js and ts rules:
 arrowParens: avoid
-semi: false
+semi: true
 # jsx and tsx rules:
 jsxBracketSameLine: false
