@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled';
 
 export const StyledCharactersWidget = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const StyledCharactersWidget = styled.div`
   height: 60vh;
   position: relative;
   top: -10%;
-`
+`;
 
 export const StyledBox = styled.div`
   display: flex;
@@ -17,13 +17,13 @@ export const StyledBox = styled.div`
   height: 24vh;
   width: 55vw;
   margin: 2vw 0 2vw 0;
-`
+`;
 
 export const StyledGrid = styled.div`
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-wrap: wrap;
-   gap: 12px;
-   margin-bottom: 2vw;
-`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 2vw;
+`;

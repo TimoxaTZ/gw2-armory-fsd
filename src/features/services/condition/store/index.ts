@@ -1,11 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { NotificationPayloadType, NotificationType, RequestStatusType } from '../lib/types'
-import { v1 } from 'uuid'
 import { SnackbarKey } from 'notistack'
-import initialState from '../structure'
+import { v1 } from 'uuid'
+import { NotificationPayloadType, NotificationType, RequestStatusType } from '../lib/types'
+import { initialState } from '../structure'
+import { name } from '../constants/name'
 
-export const slice = createSlice({
-  name: `Condition`,
+const slice = createSlice({
+  name,
   initialState,
   reducers: {
     setAppStatus(state, action: PayloadAction<{ status: RequestStatusType }>) {
@@ -67,7 +68,7 @@ export const slice = createSlice({
       state.notifications = [...state.notifications, notification]
     },
     removeNotification(state, action: PayloadAction<{ notificationId: SnackbarKey }>) {
-      state.notifications = state.notifications.filter(notification => notification.key != action.payload.notificationId)
+      state.notifications = state.notifications.filter(notification => notification.key !== action.payload.notificationId)
     },
   },
 })

@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import initialState from '../structure'
+import { initialState } from '../structure'
+import { name } from '../constants/name'
 
-export const slice = createSlice({
-  name: `SampleW`,
+const slice = createSlice({
+  name,
   initialState,
   reducers: {
     setJWT(state, action: PayloadAction<{ sample: string }>) {

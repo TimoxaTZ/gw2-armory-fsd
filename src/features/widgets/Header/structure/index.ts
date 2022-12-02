@@ -1,6 +1,6 @@
 const initialState = {
   loading: false,
   header: '',
-}
+};
 
-export default initialState
+export default initialState;

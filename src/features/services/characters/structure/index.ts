@@ -1,6 +1,4 @@
-const initialState = {
+export const initialState = {
   loading: true,
   characters: [],
-}
-
-export default initialState
+};

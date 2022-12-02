@@ -1,22 +1,16 @@
-import React, { FC } from 'react';
-import AppStyle from './style';
-import AppRouter from '../../router';
+import { CRI } from '../../../components/shared/lib/ContainerReconciliationIsolator';
 import { condition } from '../../../features/services/condition';
-import CRI from '../../../components/shared/lib/ContainerReconciliationIsolator';
+import { mobile } from '../../../features/services/mobile';
+import { AppRouter } from '../../router';
+
+import { AppStyle } from './style';
+
 import '../../../styles/unselectable.css';
 import '../../../features/services/localization';
-import { mobile } from '../../../features/services/mobile';
 
-const App: FC = props => {
-  return (
-    <AppStyle>
-      <AppRouter />
-      <CRI containers={[
-        condition.useContainer,
-      mobile.useContainer
-      ]} />
-    </AppStyle>
-  )
-}
-
-export default App
+export const App: FC = () => (
+  <AppStyle>
+    <AppRouter />
+    <CRI containers={[condition.useContainer, mobile.useContainer]} />
+  </AppStyle>
+);

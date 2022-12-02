@@ -1,8 +1,5 @@
-import GetCharactersTC from "../characters";
+import { GetCharactersTC } from '../characters';
 
-
-const asyncActions = {
+export const asyncActions = {
   GetCharactersTC,
-}
-
-export default asyncActions
+};

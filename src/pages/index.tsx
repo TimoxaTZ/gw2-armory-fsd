@@ -1,13 +1,11 @@
-import TodoPage from './Simple'
-import MainPage from "./Main";
-import CharactersPage from "./Characters";
-import AuthPage from "./Auth";
-import NotFoundPage from "./NotFound";
+import { AuthPage } from './Auth';
+import { CharactersPage } from './Characters';
+import { MainPage } from './Main';
+import { TodoPage } from './Simple';
 
 export const Page = {
   TodoPage,
   MainPage,
   CharactersPage,
   AuthPage,
-  NotFoundPage,
-}
+};

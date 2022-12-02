@@ -1,10 +1,12 @@
-import { createAsyncThunk } from '@reduxjs/toolkit'
-import { ThunkCreator } from '../../../../utils/lib/ThunkCreator'
-import RestAPI from '../api'
-import { ThunkError } from '../../../../app/entry/lib/types'
+import { ThunkError } from '../../../../app/entry/lib/types';
+import { ThunkCreator } from '../../../../utils/functions/ThunkCreator';
+import { RestAPI } from '../api';
+import { name } from '../constants/name';
 
-const GetCharactersTC = createAsyncThunk<any, void, ThunkError>('Characters/Get', async (payload, thunkAPI) => {
-  return await ThunkCreator({ apiMethod: RestAPI.getCharacters, payload }, thunkAPI)
-})
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-export default GetCharactersTC
+export const GetCharactersTC = createAsyncThunk<any, string, ThunkError>(
+  `${name}/Get`,
+  async (payload, thunkAPI) =>
+    await ThunkCreator({ apiMethod: () => RestAPI.getCharacters(payload) }, thunkAPI),
+);

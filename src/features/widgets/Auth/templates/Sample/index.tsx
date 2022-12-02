@@ -1,8 +1,7 @@
-import React, { FC } from 'react'
-import { Style } from './style'
+import React, { FC } from 'react';
 
-const Sample: FC = props => {
-  return <Style>asd</Style>
-}
+import { Style } from './style';
 
-export default Sample
+const Sample: FC = () => <Style>asd</Style>;
+
+export default Sample;

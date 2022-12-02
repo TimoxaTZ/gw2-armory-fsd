@@ -1,18 +1,12 @@
-import React from 'react'
+import { Sample } from '../../features/widgets/_Sample';
+import { Layout } from '../../layouts';
+import { Styled } from '../../styles/DynamicStyledComponent';
 
-import { Sample } from '../../features/widgets/_Sample'
-import { Layout } from '../../layouts'
-import StyleContainer from '../../styles/StyleContainer'
-
-const TodoPage = () => {
-  return (
-    <Layout.Main>
-      <StyleContainer column>
-         TodoPage
-        <Sample.Container />
-      </StyleContainer>
-    </Layout.Main>
-  )
-}
-
-export default TodoPage
+export const TodoPage = () => (
+  <Layout.Main>
+    <Styled.div column middle>
+      TodoPage
+      <Sample.Container />
+    </Styled.div>
+  </Layout.Main>
+);

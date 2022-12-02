@@ -1,0 +1,20 @@
+ls:
+  packages/*/src:
+    .dir: kebab-case | regex:test
+    .json: kebab-case
+    .js: kebab-case
+    .spec.ts: kebab-case
+    .ts: kebab-case
+    .tsx: kebab-case
+    .d.ts: kebab-case
+    .svg: kebab-case
+
+  packages/*/cypress:
+    .dir: kebab-case
+    .json: kebab-case
+    .js: kebab-case
+    .spec.ts: kebab-case
+    .ts: kebab-case
+
+ignore:
+  - packages/tfo-lk/cypress/extension

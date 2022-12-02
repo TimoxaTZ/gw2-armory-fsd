@@ -1,22 +1,26 @@
-import { useEffect } from 'react'
-import { UIPropertyType } from '../ui'
-import { useAppSelector } from '../../../../utils/hooks/useAppSelector'
-import { useActions } from '../../../../utils/hooks/useActions'
-import {Actions} from "../../../services/characters/store";
+import { useEffect } from 'react';
+
+import { useActions } from '../../../../utils/hooks/useActions';
+import { useAppSelector } from '../../../../utils/hooks/useAppSelector';
+import { Actions } from '../../../services/characters/store';
+import { UIPropertyType } from '../ui';
 
 export const useContainer = () => {
+  const token = localStorage.getItem('token') || null;
 
   useEffect(() => {
-    GetCharactersTC()
-  }, [])
+    token && GetCharactersTC(token);
+  }, []);
 
-  const {loading: status, characters: charactersData} = useAppSelector(state => state.characters)
+  const { loading: status, characters: charactersData } = useAppSelector(
+    (state) => state.characters,
+  );
 
-  const {GetCharactersTC} = useActions(Actions)
+  const { GetCharactersTC } = useActions(Actions);
 
   const data: UIPropertyType = {
     characters: charactersData,
-    loading: status
-  }
-  return data
-}
+    loading: status,
+  };
+  return data;
+};

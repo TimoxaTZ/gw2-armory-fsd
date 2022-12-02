@@ -1,11 +1,10 @@
-import React, { FC } from 'react'
-import { PresentationStyle } from './style'
-import StyleContainer from '../../../../styles/StyleContainer'
+import React from 'react'
+import { Styled } from '../../../../styles/DynamicStyledComponent'
 
 export type UIPropertyType = {}
 
-const UI: FC<UIPropertyType> = props => {
-  return <StyleContainer>sad</StyleContainer>
-}
+export const UI: FC<UIPropertyType> =  React.memo((props) => {
 
-export default UI
+  return <Styled.div>123</Styled.div>
+})
+

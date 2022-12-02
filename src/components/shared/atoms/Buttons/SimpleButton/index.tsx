@@ -1,38 +1,32 @@
-import React, {FC} from 'react'
-import {StyledSimpleButtonBody} from './style'
-import {NavLink} from "react-router-dom";
+import React, { FC } from 'react';
+import { NavLink } from 'react-router-dom';
 
+import { StyledSimpleButtonBody } from './style';
 
 type OwnPropertyType = {
-    buttonUrl?: string
-    buttonName: string
-    // buttonStyle: 1 | 2 ;
-    resetStorage?: boolean
-    onClick?: () => void
-}
+  buttonUrl?: string;
+  buttonName: string;
+  // buttonStyle: 1 | 2 ;
+  resetStorage?: boolean;
+  onClick?: () => void;
+};
 
-const SimpleButton: FC<OwnPropertyType> = (props) => {
+export const SimpleButton: FC<OwnPropertyType> = React.memo((props) => {
+  if (props.resetStorage) {
+    localStorage.clear();
+  }
 
-
-
-    if (props.resetStorage) {
-        localStorage.clear();
-    }
-
-    return (
-        <>
-            {props.buttonUrl
-                ? <NavLink to={props.buttonUrl}>
-                    <StyledSimpleButtonBody onClick={props.onClick}>
-                        {props.buttonName}
-                    </StyledSimpleButtonBody>
-                </NavLink>
-
-                : <StyledSimpleButtonBody onClick={props.onClick}>
-                    {props.buttonName}
-                </StyledSimpleButtonBody>}
-        </>
-    )
-}
-
-export default SimpleButton
+  return (
+    <>
+      {props.buttonUrl ? (
+        <NavLink to={props.buttonUrl}>
+          <StyledSimpleButtonBody onClick={props.onClick}>
+            {props.buttonName}
+          </StyledSimpleButtonBody>
+        </NavLink>
+      ) : (
+        <StyledSimpleButtonBody onClick={props.onClick}>{props.buttonName}</StyledSimpleButtonBody>
+      )}
+    </>
+  );
+});

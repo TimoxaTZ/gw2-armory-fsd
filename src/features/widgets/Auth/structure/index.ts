@@ -1,6 +1,6 @@
 const initialState = {
   loading: false,
   auth: '',
-}
+};
 
-export default initialState
+export default initialState;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled';
 
 export const StyledBox = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const StyledBox = styled.div`
   }
   //position: relative;
   //top: 5%;
-`
+`;
 
 export const StyledTextField = styled.div`
   display: flex;
@@ -65,4 +65,4 @@ export const StyledTextField = styled.div`
   -ms-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
-`
+`;

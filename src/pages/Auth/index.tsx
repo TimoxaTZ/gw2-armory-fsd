@@ -1,16 +1,13 @@
-import React from 'react'
-import { Layout } from '../../layouts'
-import StyleContainer from '../../styles/StyleContainer'
-import {Auth} from "../../features/widgets/Auth";
+import React from 'react';
 
-const AuthPage = () => {
-  return (
-    <Layout.Main>
-      <StyleContainer column>
-          <Auth.Container/>
-      </StyleContainer>
-    </Layout.Main>
-  )
-}
+import { Auth } from '../../features/widgets/Auth';
+import { Layout } from '../../layouts';
+import { Styled } from '../../styles/DynamicStyledComponent';
 
-export default AuthPage
+export const AuthPage = () => (
+  <Layout.Main>
+    <Styled.div column>
+      <Auth.Container />
+    </Styled.div>
+  </Layout.Main>
+);

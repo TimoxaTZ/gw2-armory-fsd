@@ -1,20 +1,18 @@
-import { Sample } from '../../features/widgets/_Sample'
-import { condition } from '../../features/services/condition'
-import { sample } from '../../features/services/_sample'
-import { mobile } from '../../features/services/mobile'
-
-import {Content} from "../../features/widgets/Content";
-import {Characters} from "../../features/widgets/Characters";
-import {Auth} from "../../features/widgets/Auth";
-import {Header} from "../../features/widgets/Header";
-import {characters} from "../../features/services/characters";
+import { sample } from '../../features/services/_sample';
+import { characters } from '../../features/services/characters';
+import { condition } from '../../features/services/condition';
+import { mobile } from '../../features/services/mobile';
+import { Sample } from '../../features/widgets/_Sample';
+import { Auth } from '../../features/widgets/Auth';
+import { Characters } from '../../features/widgets/Characters';
+import { Content } from '../../features/widgets/Content';
+import { Header } from '../../features/widgets/Header';
 
 export const reducersList = {
-
-  //MetaServices
+  // MetaServices
   condition: condition.Reducer,
   mobile: mobile.Reducer,
-  //MetaServices
+  // MetaServices
 
   // Sample
   _sample: sample.Reducer,
@@ -31,4 +29,4 @@ export const reducersList = {
   Auth: Auth.Reducer,
   Header: Header.Reducer,
   // Widgets
-}
+};

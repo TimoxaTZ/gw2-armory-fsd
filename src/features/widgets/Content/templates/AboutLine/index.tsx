@@ -1,12 +1,9 @@
-import React, {FC} from 'react'
-import {StyledTitle, StyledTitleBox} from './style'
+import React, { FC } from 'react';
 
-const AboutLine: FC = props => {
-  return <StyledTitleBox>
-            <StyledTitle>
-                About GW2 Armory
-           </StyledTitle>
+import { StyledTitle, StyledTitleBox } from './style';
+
+export const AboutLine: FC = React.memo(() => (
+  <StyledTitleBox>
+    <StyledTitle>About GW2 Armory</StyledTitle>
   </StyledTitleBox>
-}
-
-export default AboutLine
+));

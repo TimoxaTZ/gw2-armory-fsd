@@ -1,12 +1,11 @@
-import React, { FC } from 'react'
-import { StyledName } from './style'
+import React, { FC } from 'react';
+
+import { StyledName } from './style';
 
 type OwnPropsType = {
-  name: string
-}
+  name: string;
+};
 
-const CharacterN: FC<OwnPropsType> = ({ name }) => {
-  return <StyledName>{name}</StyledName>
-}
-
-export default CharacterN
+export const CharacterN: FC<OwnPropsType> = React.memo(({ name }) => (
+  <StyledName>{name}</StyledName>
+));

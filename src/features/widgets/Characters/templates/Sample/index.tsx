@@ -1,8 +1,7 @@
-import React, { FC } from 'react'
-import { Style } from './style'
+import React from 'react';
 
-const Sample: FC = props => {
-  return <Style>asd</Style>
-}
+import { Styled } from '../../../../../styles/DynamicStyledComponent';
 
-export default Sample
+type OwnPropertyType = {};
+
+export const Sample: FC<OwnPropertyType> = React.memo(() => <Styled.div>asd</Styled.div>);

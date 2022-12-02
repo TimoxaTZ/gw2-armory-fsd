@@ -1,12 +1,12 @@
-import React, { FC } from 'react'
-import Loading from '../../../templates/Loading'
+import React, { FC } from 'react';
+
+import { Loading } from '../../../templates/Loading';
 
 type OwnPropertyType = {
-  loading: boolean
-}
+  loading: boolean;
+  children: React.ReactNode;
+};
 
-const LoadingWrapper: FC<OwnPropertyType> = ({ children, loading }) => {
-  return <>{loading ? <Loading /> : children}</>
-}
-
-export default React.memo(LoadingWrapper)
+export const LoadingWrapper: FC<OwnPropertyType> = React.memo(({ children, loading }) => (
+  <>{loading ? <Loading /> : children}</>
+));

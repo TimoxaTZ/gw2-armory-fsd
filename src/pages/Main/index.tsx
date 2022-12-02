@@ -1,21 +1,13 @@
-import React, {useState} from 'react'
+import React from 'react';
 
-import { Sample } from '../../features/widgets/_Sample'
-import { Layout } from '../../layouts'
-import StyleContainer from '../../styles/StyleContainer'
 import { Content } from '../../features/widgets/Content';
+import { Layout } from '../../layouts';
+import { Styled } from '../../styles/DynamicStyledComponent';
 
-
-
-const MainPage = () => {
-
-  return (
-    <Layout.Main>
-      <StyleContainer column>
-        <Content.Container />
-      </StyleContainer>
-    </Layout.Main>
-  )
-}
-
-export default MainPage
+export const MainPage = () => (
+  <Layout.Main>
+    <Styled.div column>
+      <Content.Container />
+    </Styled.div>
+  </Layout.Main>
+);

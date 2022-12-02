@@ -35,5 +35,8 @@
 
 > #useAppSelector
 > вместо useSelector используется типизированный useAppSelector
+
+> Для создания новых сущностей просто копируйте папку _sample/_Sample
 > 
+>+ не забывайте импортировать slice в store index/store/reducers
 >+ каждый slice и thunk должны иметь уникальный: name (slice), typePrefix (thunk)

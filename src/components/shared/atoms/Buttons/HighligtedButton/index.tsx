@@ -1,26 +1,27 @@
-import React, { FC } from 'react'
-import { StyledButtonContainer, StyledButtonBody, StyledNavLinkHighlight } from './style'
+import React, { FC } from 'react';
+
+import { StyledButtonBody, StyledButtonContainer, StyledNavLinkHighlight } from './style';
 
 type OwnPropertyType = {
-  buttonUrl: string
-  buttonName: string
-  highlightStyle: 1 | 2
-  resetStorage?: boolean
-}
+  buttonUrl: string;
+  buttonName: string;
+  highlight: 1 | 2;
+  resetStorage?: boolean;
+};
 
-const HighlightedButton: FC<OwnPropertyType> = ({ buttonUrl, resetStorage, buttonName, highlightStyle }) => {
-  //reset api-token
-  if (resetStorage) {
-    localStorage.clear()
-  }
+export const HighlightedButton: FC<OwnPropertyType> = React.memo(
+  ({ buttonUrl, resetStorage, buttonName, highlight }) => {
+    //reset api-token
+    if (resetStorage) {
+      localStorage.clear();
+    }
 
-  return (
-    <StyledButtonContainer>
-      <StyledNavLinkHighlight to={buttonUrl} highlightStyle={highlightStyle}>
-        <StyledButtonBody>{buttonName}</StyledButtonBody>
-      </StyledNavLinkHighlight>
-    </StyledButtonContainer>
-  )
-}
-
-export default HighlightedButton
+    return (
+      <StyledButtonContainer>
+        <StyledNavLinkHighlight to={buttonUrl} highlight={highlight}>
+          <StyledButtonBody>{buttonName}</StyledButtonBody>
+        </StyledNavLinkHighlight>
+      </StyledButtonContainer>
+    );
+  },
+);

@@ -1,9 +1,7 @@
-import instance from '../../../../app/api'
+import { instance } from '../../../../app/api/axios'
 
-const RestAPI = {
-  async get() {
+export const RestAPI = {
+  async get(payload: any) {
     return await instance.get<{}>('todos/')
   },
 }
-
-export default RestAPI

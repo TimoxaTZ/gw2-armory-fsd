@@ -1,8 +1,9 @@
-import React, { FC } from 'react'
-import { Style } from './style'
+import React from 'react'
+import { Styled } from '../../../../../styles/DynamicStyledComponent'
 
-const Sample: FC = props => {
-  return <Style>asd</Style>
-}
+type OwnPropertyType = {}
 
-export default Sample
+export const Sample: FC<OwnPropertyType> = React.memo(({ children }) => {
+  return <Styled.div>asd</Styled.div>
+})
+

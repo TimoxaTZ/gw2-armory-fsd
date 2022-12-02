@@ -1,15 +1,13 @@
-import React, {FC} from 'react'
-import {CircularProgress} from "@mui/material";
-import {StyledProgressbar} from "./style";
+import React, { FC } from 'react';
 
-type OwnPropertyType = {}
+import { StyledProgressbar } from './style';
 
-const Loading: FC<OwnPropertyType> = () => {
-    return (
-        <StyledProgressbar>
-            <CircularProgress size={75} color={"inherit"}/>
-        </StyledProgressbar>
-    )
-}
+import { CircularProgress } from '@mui/material';
 
-export default Loading
+type OwnPropertyType = {};
+
+export const Loading: FC<OwnPropertyType> = React.memo(() => (
+  <StyledProgressbar>
+    <CircularProgress size={75} color="inherit" />
+  </StyledProgressbar>
+));

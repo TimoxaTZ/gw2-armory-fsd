@@ -1,1 +1,1 @@
-export type HeaderType = {}
+export type HeaderType = {};

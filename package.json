@@ -1,65 +1,39 @@
 {
   "name": "GuildWars2_Armory_v2",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.6.0",
-    "@emotion/styled": "^11.6.0",
-    "@mui/icons-material": "^5.1.1",
-    "@mui/material": "^5.2.7",
-    "@mui/styled-engine-sc": "^5.1.0",
-    "@reduxjs/toolkit": "^1.5.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/react-i18next": "^8.1.0",
-    "axios": "^0.21.1",
-    "dot-prop": "^6.0.1",
-    "i18next": "^21.4.2",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.9",
+    "@mui/styled-engine-sc": "^5.10.6",
+    "@npm.piece/dynamic-styles": "^1.0.2",
+    "@npm.piece/hooks": "^1.0.4",
+    "@npm.piece/mf-utils": "^1.0.7",
+    "@reduxjs/toolkit": "^1.8.6",
+    "axios": "^1.1.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "i18next": "^21.10.0",
     "lodash": "^4.17.21",
-    "notistack": "^2.0.3",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-hook-form": "^7.15.2",
-    "react-redux": "^7.2.3",
-    "react-router-dom": "^6.0.2",
-    "react-scripts": "4.0.3",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0",
-    "styled-components": "^5.2.1",
-    "typescript": "^4.1.2",
+    "notistack": "^2.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.37.0",
+    "react-redux": "^8.0.4",
+    "react-router-dom": "^6.4.2",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "typescript": "^4.8.4",
     "uuid": "^8.3.2",
-    "web-vitals": "^1.0.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn pre-commit"
-    }
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "updated-cra start",
+    "build": "updated-cra build",
     "test": "react-scripts test",
-    "prettier": "prettier --write \"{,src/**/}*.{js,jsx,ts,tsx}\"",
-    "pre-commit": "yarn && yarn prettier &&  yarn build",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
+    "eslint": "eslint --fix --ext .js,.jsx,.tsx,ts ."
   },
   "browserslist": {
     "production": [
@@ -74,23 +48,21 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.3.6",
-    "@storybook/addon-essentials": "^6.3.6",
-    "@storybook/addon-links": "^6.3.6",
-    "@storybook/node-logger": "^6.3.6",
-    "@storybook/preset-create-react-app": "^3.2.0",
-    "@storybook/react": "^6.3.6",
-    "@types/jest": "^26.0.15",
-    "@types/lodash": "^4.14.168",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.17",
-    "@types/react-router-dom": "^5.3.2",
-    "@types/styled-components": "^5.1.9",
+    "@npm.piece/cra-update": "^1.0.4",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.1.2",
+    "@types/lodash": "~4.14.184",
+    "@types/node": "^18.11.0",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-i18next": "^8.1.0",
+    "@types/react-router-dom": "^5.3.3",
     "@types/uuid": "^8.3.0",
-    "add": "^2.0.6",
-    "husky": "^6.0.0",
-    "prettier": "^2.3.0",
-    "yarn": "^1.22.10"
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.8.0",
+    "react-scripts": "^5.0.1",
+    "webpack-bundle-analyzer": "^4.6.1"
   }
 }

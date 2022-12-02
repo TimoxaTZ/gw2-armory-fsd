@@ -1,11 +1,12 @@
-import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+
+import styled from '@emotion/styled';
 
 export const StyledButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const StyledButtonBody = styled.button`
   position: absolute;
@@ -40,36 +41,37 @@ export const StyledButtonBody = styled.button`
     background: rgba(255, 255, 255, 0.075);
     transform: skew(25deg);
   }
-`
+`;
 type StyledNavLinkPropsType = {
-  highlightStyle: 1 | 2
-}
+  highlight: 1 | 2;
+};
+
 export const StyledNavLinkHighlight = styled(NavLink)<StyledNavLinkPropsType>`
-    position: relative;
-    width: 160px;
-    height: 60px;
-    display: inline-block;
-    background: #fff;
-    margin: 20px;
-    
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: #f00;
-      transition: 0.5s;
-      background: ${({ highlightStyle }) =>
-        highlightStyle === 1
-          ? 'linear-gradient(45deg,#ff075b, #0e1538, #0e1538,#1aff22)'
-          : highlightStyle === 2 && 'linear-gradient(45deg,#00ccff, #0e1538, #0e1538,#d400d4)'}
-    }
-    
-    }
-    &:hover&:before {
-      inset: -3px;
-    }
-    &:hover&:after {
-      inset: -3px;
-      filter: blur(10px);
-    }
-`
+  position: relative;
+  width: 160px;
+  height: 60px;
+  display: inline-block;
+  background: #fff;
+  margin: 20px;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #f00;
+    transition: 0.5s;
+    background: ${({ highlight }) =>
+      highlight === 1
+        ? 'linear-gradient(45deg,#ff075b, #0e1538, #0e1538,#1aff22)'
+        : highlight === 2 && 'linear-gradient(45deg,#00ccff, #0e1538, #0e1538,#d400d4)'};
+  }
+
+  &:hover&:before {
+    inset: -3px;
+  }
+  &:hover&:after {
+    inset: -3px;
+    filter: blur(10px);
+  }
+`;

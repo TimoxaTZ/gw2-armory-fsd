@@ -1,12 +1,11 @@
-import React, { FC } from 'react'
-import { StyledLogoName } from './style'
+import React, { FC } from 'react';
+
+import { StyledLogoName } from './style';
 
 type OwnPropsType = {
-  text: string
-}
+  text: string;
+};
 
-const LogoName: FC<OwnPropsType> = ({ text }) => {
-  return <StyledLogoName>{text}</StyledLogoName>
-}
+const LogoName: FC<OwnPropsType> = ({ text }) => <StyledLogoName>{text}</StyledLogoName>;
 
-export default LogoName
+export default LogoName;

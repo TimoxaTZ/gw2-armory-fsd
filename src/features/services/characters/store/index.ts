@@ -1,27 +1,29 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import initialState from '../structure'
-import asyncActions from '../thunks/io'
+import { name } from '../constants/name';
+import { initialState } from '../structure';
+import { asyncActions } from '../thunks/io';
+
+import { createSlice } from '@reduxjs/toolkit'; //PayloadAction
 
 export const slice = createSlice({
-  name: `Characters`,
+  name,
   initialState,
   reducers: {
     // setJWT(state, action: PayloadAction<{ characters: string }>) {
     //   state.characters = action.payload.characters
     // },
   },
-  extraReducers: builder => {
+  extraReducers: (builder) => {
     builder.addCase(asyncActions.GetCharactersTC.fulfilled, (state, action) => {
-      state.loading = true
+      state.loading = true;
       state.characters = action.payload;
-      state.loading = false
-    })
+      state.loading = false;
+    });
   },
-})
+});
 
 export const Actions = {
   ...slice.actions,
   ...asyncActions,
-}
+};
 
-export const Reducer = slice.reducer
+export const Reducer = slice.reducer;

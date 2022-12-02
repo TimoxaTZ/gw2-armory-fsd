@@ -1,1 +1,1 @@
-export type CharactersType = string []
+export type CharactersType = string[];

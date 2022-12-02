@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled';
 
 export const StyledSimpleButtonBody = styled.button`
   background: rgba(0, 0, 0, 0.15);
@@ -33,4 +33,4 @@ export const StyledSimpleButtonBody = styled.button`
   &:hover&:after {
     opacity: 1;
   }
-`
+`;

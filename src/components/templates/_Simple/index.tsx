@@ -1,10 +1,9 @@
-import React, { FC } from 'react'
-import { SimpleStyle } from './style'
+import React from 'react'
+import { Styled } from '../../../styles/DynamicStyledComponent'
 
 type OwnPropertyType = {}
 
-const Simple: FC<OwnPropertyType> = () => {
-  return <SimpleStyle></SimpleStyle>
-}
+export const Simple: FC<OwnPropertyType> = React.memo(() => {
+  return <Styled.div>123</Styled.div>
+})
 
-export default Simple

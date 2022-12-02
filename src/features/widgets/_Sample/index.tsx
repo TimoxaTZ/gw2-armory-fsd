@@ -1,5 +1,5 @@
+import { Container } from './container'
 import { Actions, Reducer } from './store'
-import Container from './container'
 
 export const Sample = {
   Container,

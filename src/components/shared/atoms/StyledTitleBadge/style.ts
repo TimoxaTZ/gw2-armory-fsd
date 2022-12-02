@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled';
 
 export const StyledName = styled.button`
   display: flex;
@@ -41,4 +41,4 @@ export const StyledName = styled.button`
   -ms-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
-`
+`;
