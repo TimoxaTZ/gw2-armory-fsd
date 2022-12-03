@@ -12,14 +12,14 @@ export const useContainer = () => {
     token && GetCharactersTC(token);
   }, []);
 
-  const { loading: status, characters: charactersData } = useAppSelector(
-    (state) => state.characters,
-  );
+  const { loading: status, characters } = useAppSelector((state) => state.characters);
+
+  const charactersNamesList = characters || [];
 
   const { GetCharactersTC } = useActions(Actions);
 
   const data: UIPropertyType = {
-    characters: charactersData,
+    characters: charactersNamesList,
     loading: status,
   };
   return data;

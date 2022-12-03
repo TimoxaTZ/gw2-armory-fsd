@@ -5,7 +5,6 @@ const baseURL = process.env.REACT_APP_BACKEND_IP;
 const headers = {
   // Authorization: '',
 };
-const token = localStorage.getItem('token');
 
 export const instance = axios.create({
   baseURL,
@@ -13,9 +12,7 @@ export const instance = axios.create({
 });
 
 instance.interceptors.request.use((config) => {
-  config.url += `?&access_token=${token}` || '';
   // config.headers!.Authorization = `Bearer ${token}`;
-
   return config;
 });
 

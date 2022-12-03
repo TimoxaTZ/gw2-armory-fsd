@@ -4,13 +4,13 @@ import { HighlightedButton } from '../../../../components/shared/atoms/Buttons/H
 import { Loading } from '../../../../components/shared/atoms/Loading';
 import { StyledTitleBadge } from '../../../../components/shared/atoms/StyledTitleBadge';
 import { ArrayRender } from '../../../../components/shared/lib/ArrayRender';
-import { CharactersType } from '../lib/types';
+import { CharacterNamesList } from '../lib/types';
 import { CharacterN } from '../templates/CharacterN';
 
 import { StyledBox, StyledCharactersWidget, StyledGrid } from './style';
 
 export type UIPropertyType = {
-  characters: CharactersType;
+  characters: CharacterNamesList;
   loading: boolean;
 };
 

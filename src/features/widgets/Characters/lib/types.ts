@@ -1,1 +1,1 @@
-export type CharactersType = string[];
+export type { CharacterNamesList, CharacterType } from '../../../services/characters/lib/types';

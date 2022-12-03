@@ -8,5 +8,13 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 export const GetCharactersTC = createAsyncThunk<any, string, ThunkError>(
   `${name}/Get`,
   async (payload, thunkAPI) =>
-    await ThunkCreator({ apiMethod: () => RestAPI.getCharacters(payload) }, thunkAPI),
+    await ThunkCreator(
+      {
+        apiMethod: async () => {
+          const res = await RestAPI.getCharacters(payload);
+          return res;
+        },
+      },
+      thunkAPI,
+    ),
 );

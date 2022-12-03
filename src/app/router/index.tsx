@@ -17,6 +17,9 @@ export const AppRouter: FC = () => (
     <Route path="/characters">
       <Route index element={<Page.CharactersPage />} />
     </Route>
+    <Route path="/characters/:id">
+      <Route index element={<Page.CharacterPage />} />
+    </Route>
     <Route path="*" element={<NotFound />} />
   </Routes>
 );

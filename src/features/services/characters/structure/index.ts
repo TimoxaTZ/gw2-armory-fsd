@@ -1,4 +1,7 @@
+import { CharacterNamesList, CharacterType } from '../lib/types';
+
 export const initialState = {
   loading: true,
-  characters: [],
+  characters: [] as CharacterNamesList,
+  charactersData: [] as CharacterType[],
 };

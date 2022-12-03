@@ -4,6 +4,7 @@ import { condition } from '../../features/services/condition';
 import { mobile } from '../../features/services/mobile';
 import { Sample } from '../../features/widgets/_Sample';
 import { Auth } from '../../features/widgets/Auth';
+import { Character } from '../../features/widgets/Character';
 import { Characters } from '../../features/widgets/Characters';
 import { Content } from '../../features/widgets/Content';
 import { Header } from '../../features/widgets/Header';
@@ -26,6 +27,7 @@ export const reducersList = {
   // Widgets
   Content: Content.Reducer,
   Characters: Characters.Reducer,
+  Character: Character.Reducer,
   Auth: Auth.Reducer,
   Header: Header.Reducer,
   // Widgets

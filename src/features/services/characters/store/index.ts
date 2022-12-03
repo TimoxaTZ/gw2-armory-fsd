@@ -18,6 +18,11 @@ export const slice = createSlice({
       state.characters = action.payload;
       state.loading = false;
     });
+    builder.addCase(asyncActions.GetCharacterTC.fulfilled, (state, action) => {
+      state.loading = true;
+      state.charactersData = action.payload;
+      state.loading = false;
+    });
   },
 });
 
